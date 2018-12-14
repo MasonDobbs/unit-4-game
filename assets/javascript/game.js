@@ -27,6 +27,34 @@ $("#wins").html("Wins: " + wins);
 
 $("#losses").html("Losses: " + loses);
 
+
+function resetGame(){
+
+    $("#totalScore").html(0)
+
+$("#wins").html("Wins: " + wins);
+
+$("#losses").html("Losses: " + loses);
+
+    computerValue = Math.floor(Math.random()*250) +25;
+
+console.log(computerValue);
+
+ruby = Math.floor(Math.random() * 25) +1;
+
+sapphire = Math.floor(Math.random() * 25) +1;
+
+emerald = Math.floor(Math.random() * 25) +1;
+
+diamond = Math.floor(Math.random() * 25) +1;
+
+$("#randomNumber").html(computerValue);
+}
+
+
+
+
+
 $("#ruby").on("click", function(){
 playerValue += ruby; 
 console.log(ruby);
@@ -35,20 +63,24 @@ $("#totalScore").html(playerValue);
 
 if(playerValue > computerValue){
     $("#randomNumber").html("You Lose!");
-    loses++;
     console.log(loses);
     $("#losses").html("Losses: " + loses++);
-
+    resetGame();
+    playerValue = 0;
 }
 else if(playerValue === computerValue){
     $("#randomNumber").html("You Win!");
-    wins++;
     console.log("You Win!");
     $("#wins").html("Wins: " + wins++);
+    resetGame();
+    playerValue = 0;
 }
 
-
 });
+
+
+
+
 
 $("#sapphire").on("click", function(){
     playerValue += sapphire;
@@ -58,20 +90,24 @@ $("#sapphire").on("click", function(){
 
     if(playerValue > computerValue){
         $("#randomNumber").html("You Lose!");
-        loses++;
+        
         console.log(loses);
         $("#losses").html("Losses: " + loses++)
+        resetGame();
+        playerValue = 0;
     }
     else if(playerValue === computerValue){
         $("#randomNumber").html("You Win!");
-        wins++;
         console.log("You Win!");
         $("#wins").html("Wins: " + wins++);
+        resetGame();
+        playerValue = 0;
     }
 
-
-
 });
+
+
+
 
 $("#emerald").on("click", function(){
     playerValue += emerald;
@@ -81,19 +117,25 @@ $("#emerald").on("click", function(){
 
     if(playerValue > computerValue){
         $("#randomNumber").html("You Lose!");
-        loses++;
+        
         console.log(loses);
         $("#losses").html("Losses: " + loses++)
+        resetGame();
+        playerValue = 0;
     }
+
     else if(playerValue === computerValue){
         $("#randomNumber").html("You Win!");
-        wins++;
         console.log("You Win!");
         $("#wins").html("Wins: " + wins++);
+        resetGame();
+        playerValue = 0;
     }
 
-
 });
+
+
+
 
 $("#diamond").on("click", function(){
     playerValue += diamond
@@ -103,17 +145,20 @@ $("#diamond").on("click", function(){
 
     if(playerValue > computerValue){
         $("#randomNumber").html("You Lose!");
-        loses++;
+        
         console.log(loses);
         $("#losses").html("Losses: " + loses++)
-    }
-    else if(playerValue === computerValue){
-        $("#randomNumber").html("You Win!");
-        wins++;
-        console.log("You Win!");
-        $("#wins").html("Wins: " + wins++);
+        resetGame();
+        playerValue = 0;
     }
 
+    else if(playerValue === computerValue){
+        $("#randomNumber").html("You Win!");
+        console.log("You Win!");
+        $("#wins").html("Wins: " + wins++);
+        resetGame();
+        playerValue = 0;
+    }
 
 });
 
