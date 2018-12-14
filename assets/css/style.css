@@ -4,6 +4,7 @@ body{
 
 h1{
     font-size: 500%;
+    text-align: center;
 }
 
 .crystals{
@@ -12,5 +13,22 @@ h1{
 }
 
 .instructions{
-    font-size: 200%
+    font-size: 200%;
+    text-align: center;
+}
+
+#randomNumber{
+    font-size: 200%;
+}
+
+#wins{
+    font-size: 200%;
+}
+
+#losses{
+    font-size: 200%;
+}
+
+#totalScore{
+    font-size: 200%;
 }
