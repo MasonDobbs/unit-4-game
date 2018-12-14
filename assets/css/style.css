@@ -1,3 +1,16 @@
 body{
     background-color: lightgreen;
 }
+
+h1{
+    font-size: 500%;
+}
+
+.crystals{
+    height: 200px;
+    width: 200px;
+}
+
+.instructions{
+    font-size: 200%
+}
